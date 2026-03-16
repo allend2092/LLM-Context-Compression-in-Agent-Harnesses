@@ -1,0 +1,23 @@
+flowchart TD
+
+U[User]
+
+U --> A[Agent Harness]
+
+A --> B[Context Manager]
+
+B --> C[Recent Context]
+
+B --> D[Compressed History]
+
+B --> E[External Memory]
+E --> F[Vector Database / Files]
+
+C --> G[LLM]
+D --> G
+F --> G
+
+G --> H[Model Response]
+
+style B fill:#ffe599
+style G fill:#f9cb9c
