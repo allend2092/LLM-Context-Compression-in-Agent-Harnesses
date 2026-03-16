@@ -1,0 +1,25 @@
+flowchart LR
+
+A[Full Conversation History]
+
+A --> B{Context Too Large?}
+
+B -->|No| C[Send to LLM]
+
+B -->|Yes| D[Split Context]
+
+D --> E[Recent Messages]
+D --> F[Older Messages]
+
+F --> G[Summarize / Compress]
+
+G --> H[Compressed Summary]
+
+H --> I[Rebuild Context]
+
+E --> I
+
+I --> J[New Prompt to LLM]
+
+style G fill:#a0d6ff
+style H fill:#d5f5e3
