@@ -1,0 +1,26 @@
+flowchart TD
+
+A[Raw Conversation or Documents]
+
+A --> B1[Chunk 1]
+A --> B2[Chunk 2]
+A --> B3[Chunk 3]
+A --> B4[Chunk 4]
+
+B1 --> C1[Summary 1]
+B2 --> C2[Summary 2]
+B3 --> C3[Summary 3]
+B4 --> C4[Summary 4]
+
+C1 --> D1[Higher-Level Summary]
+C2 --> D1
+C3 --> D2
+C4 --> D2
+
+D1 --> E[Global Summary]
+D2 --> E
+
+E --> F[Condensed Context Sent to LLM]
+
+style E fill:#d5f5e3
+style F fill:#a0d6ff
