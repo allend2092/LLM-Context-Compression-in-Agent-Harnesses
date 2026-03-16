@@ -1,0 +1,14 @@
+```mermaid
+flowchart LR
+
+A[System Prompt] --> D
+B[Conversation History] --> D
+C[Tool Outputs / Retrieved Data] --> D
+E[Current User Message] --> D
+
+D[LLM Context Window]
+
+D --> F[Model Reasoning]
+F --> G[Assistant Response]
+
+style D fill:#f9f,stroke:#333,stroke-width:2px
