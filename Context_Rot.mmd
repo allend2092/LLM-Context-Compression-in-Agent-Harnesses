@@ -1,0 +1,20 @@
+flowchart LR
+
+A[Short Context] --> B[Moderate Context]
+B --> C[Long Context]
+C --> D[Very Long Context]
+
+A --> E[High Reasoning Accuracy]
+B --> F[Slight Degradation]
+C --> G[Context Rot Begins]
+D --> H[Reasoning Breakdown]
+
+E --> I[Relevant Information Easy to Find]
+F --> J[Model Must Filter More Noise]
+G --> K[Important Details Buried]
+H --> L[Model Confusion / Hallucination]
+
+style C fill:#ffe599
+style D fill:#ff9999
+style G fill:#ffd966
+style H fill:#ff6666
