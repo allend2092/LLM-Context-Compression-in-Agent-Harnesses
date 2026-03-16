@@ -1,0 +1,30 @@
+
+All compete for limited space.
+
+---
+
+# 2. Context Growth Problem
+
+This diagram shows **why compression becomes necessary**.
+
+As conversations continue, context grows until it reaches the limit.
+
+```markdown
+```mermaid
+flowchart TD
+
+A[Start Conversation]
+
+A --> B[User Message]
+B --> C[Assistant Reply]
+
+C --> D[More Messages]
+D --> E[More Tool Outputs]
+E --> F[More History]
+
+F --> G[Context Window Limit Approaching]
+
+G --> H[Context Overflow Risk]
+
+style G fill:#ffcc00
+style H fill:#ff6666
